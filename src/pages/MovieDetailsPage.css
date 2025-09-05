@@ -1,0 +1,23 @@
+.movie-details {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.movie-details img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-details-content {
+  flex-grow: 1;
+}
+
+.movie-details-content h1 {
+  margin-top: 0;
+}
+
+.favorite-button-details {
+  margin-top: 1rem;
+}
