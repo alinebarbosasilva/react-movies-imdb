@@ -1,12 +1,71 @@
-# React + Vite
+# Consumo de API com ReactJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão Geral
+Esta aplicação em React consome a API do **OMDb** para permitir que usuários:
 
-Currently, two official plugins are available:
+- Busquem filmes digitando um termo;
+- Visualizem detalhes completos de cada filme;
+- Criem uma lista de favoritos persistida no `localStorage`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+1. **Página de Busca**
+   - Campo de texto para digitar o termo;
+   - Exibe lista de resultados com pôster, título, ano e botão para ver detalhes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Paginação**
+   - Navegação entre páginas de resultados.
+
+3. **Página de Detalhes**
+   - Exibe informações completas: diretor, elenco, sinopse, avaliação.
+
+4. **Lista de Favoritos**
+   - Botão para adicionar/remover filmes da lista de favoritos;
+   - Persistência em `localStorage`.
+
+5. **Tratamento de Erros & Loading**
+   - Indicador de carregamento enquanto aguarda resposta;
+   - Mensagens de erro quando necessário.
+
+---
+
+## Tecnologias Utilizadas
+
+- ReactJS 18  
+- Vite  
+- Axios  
+- React Router DOM  
+- LocalStorage para persistência de favoritos  
+
+## Como Rodar o Projeto
+
+1. **Clonar o repositório**
+
+```bash
+git clone <https://github.com/alinebarbosasilva/react-movies-imdb.git>
+cd react-movies
+
+Instalar dependências
+npm install
+
+Configurar a API OMDb
+Crie uma chave gratuita em OMDb API
+
+Abra src/api/omdb.js e substitua sua_chave_omdb pela sua chave.
+
+Rodar o projeto
+
+npm run dev
+Abrir no navegador
+
+Geralmente estará disponível em: http://localhost:5173
+
+Uso
+Acesse a página de Busca para procurar filmes;
+
+Clique em Detalhes para ver informações completas;
+
+Adicione filmes aos Favoritos clicando no botão correspondente;
+
+Acesse a página de Favoritos para ver e gerenciar sua lista.
+
